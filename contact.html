@@ -6,59 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GolfBox - Contact</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .hero {
-      color: #000;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>GolfBox</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header class="site-header">
+  <h1 class="site-title">GolfBox</h1>
+  <div class="logo">
+    <img src="logo.png" alt="GolfBox Logo">
+  </div>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="contact.html">Contact</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="terms.html">Terms & Policies</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="contact">
-      <h2>Contact & Booking</h2>
-      <p>Ready to swing? Reach out to us below:</p>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+<main>
+  <section class="contact">
+    <h2>Contact & Booking</h2>
+    <p>Book Your Next Event Today! Golf Box Event Includes Delivery, Setup, and Staffing (Minimum 2 Hour Rental)</p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-        <button type="submit">Send</button>
-      </form>
-      <p id="formResponse" style="text-align:center; color: green; margin-top: 1rem;"></p>
-    </section>
-  </main>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-  <footer>
-    <p>&copy; 2025 GolfBox. All rights reserved.</p>
-  </footer>
+      <label>
+        <input type="checkbox" id="clubPreference" name="clubPreference">
+        I need clubs provided (extra charge applies)
+      </label>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+      <button type="submit">Send</button>
+    </form>
+    <p id="formResponse" style="text-align:center; color: green; margin-top: 1rem;"></p>
+  </section>
 
-      // Simulate a successful submission
-      document.getElementById('formResponse').textContent = `Thank you, ${name}! We'll get back to you at ${email}.`;
+  <section class="booking-widget">
+    <h2 style="text-align: center; margin-top: 3rem;">Live Booking Calendar</h2>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/jhintz212" style="min-width:320px;height:630px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </section>
+</main>
 
-      // Clear form
-      this.reset();
-    });
-  </script>
+<footer>
+  <p>&copy; 2025 GolfBox. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    document.getElementById('formResponse').textContent = `Thank you, ${name}! We'll get back to you at ${email}.`;
+    this.reset();
+  });
+</script>
 </body>
 </html>

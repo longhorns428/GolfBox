@@ -1,0 +1,96 @@
+<!-- faqs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GolfBox - FAQs</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-section {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      padding: 0.5rem;
+      background: #006400;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0.5rem;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">GolfBox</h1>
+    <div class="logo">
+      <img src="logo.png" alt="GolfBox Logo">
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="service-area.html">Service Area</a>
+      <a href="terms.html">Terms & Policies</a>
+     <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">What space is required?</div>
+        <div class="faq-answer">We require approximately 15' x 40' for trailer setups. Pop-ups can fit as small as 13' x 12'.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can it be used indoors/outdoors?</div>
+        <div class="faq-answer">Yes! We offer both trailer-based and indoor pop-up enclosure options.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What age groups can use it?</div>
+        <div class="faq-answer">GolfBox is great for all ages! Kids to seniors — we adjust the experience for everyone.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What happens if it rains?</div>
+        <div class="faq-answer">We can relocate indoors or reschedule. We also have pop-up options for covered events.</div>
+      </div>
+
+            <div class="faq-item">
+        <div class="faq-question">Can I use my own clubs?</div>
+        <div class="faq-answer">You're more than welcome to bring your own clubs! If needed, we can also provide clubs for your event for an additional fee.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GolfBox. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,36 +1,78 @@
 /* style.css */
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
+  background: url('./Images/background.png') no-repeat center center fixed;
+  background-size: cover;
   color: #000000;
 }
 
-header {
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+}
+
+.site-header, footer {
+  width: 100%;
   background: #003300;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.site-title {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.logo {
   text-align: center;
 }
 
-nav a {
+.logo img {
+  max-height: 60px;
+}
+
+.site-nav {
+  text-align: right;
+}
+
+.site-nav a {
   color: #ffffff;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.site-nav a:hover {
   text-decoration: underline;
 }
 
 .hero {
-  background: url('golf-bg.jpg') center/cover no-repeat;
   color: #000;
   text-align: center;
   padding: 4rem 2rem;
-  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .btn {
@@ -49,19 +91,8 @@ nav a:hover {
 }
 
 section {
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
-
-footer {
-  background: #003300;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
 
 form {
   display: flex;
@@ -90,4 +121,74 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #228B22;
+}
+
+.event-boxes {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.event-box {
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.party-box {
+  background-image: url('party-bg.jpg');
+}
+
+.corporate-box {
+  background-image: url('corporate-bg.jpg');
+}
+
+.event-box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.event-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  color: #070707;
+  text-align: center;
+  display: block;
+  margin-bottom: auto;
+}
+
+.event-details {
+  font-size: 1rem;
+  color: #070707;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .event-box {
+    width: 90%;
+    height: auto;
+  }
 }
